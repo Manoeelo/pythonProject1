@@ -52,6 +52,61 @@ def brincar_de_plim(fim):
         else:
             print('{:0>9}'.format(num))
 
+def exibir_dia_da_semana_if(num):
+    print("IF")
+    if num == 1:
+        print('O dia é segunda')
+    elif num == 2:
+        print('O dia é terça')
+    elif num == 3:
+        print('O dia é quarta')
+    elif num == 4:
+        print('O dia é quinta')
+    elif num == 5:
+        print('O dia é sexta')
+    elif num == 6:
+        print('O dia é sábado')
+    elif num == 7:
+        print('O dia é domingo')
+    else:
+        print('Número inválido. Digite um número de 1 a 7')
+''' Ativo na versão 3.10
+def exibir_dia_da_semana_match(num):
+    print('MATCH')
+    match num:
+        case 1:
+            print('O dia é segunda')
+            exit()
+        case 2:
+            print('O dia é terça')
+            exit()
+        case 3:
+            print('O dia é quarta')
+            exit()
+        case 4:
+            print('O dia é quinta')
+            exit()
+        case 5:
+            print('O dia é sexta')
+            exit()
+        case 6:
+            print('O dia é sábado')
+            exit()
+        case 7:
+            print('O dia é domingo')
+            exit()
+        case _:
+            print('Número inválido. Digite um número de 1 a 7')
+            '''
+
+def brinca_de_para_ou_continua():
+    resposta = 'C' # aqui 'C' significa q continua
+
+    #while resposta == 'C' or 'c':
+    while resposta.upper() == 'C':
+        resposta = input('Digite P para para ou C para continuar ')
+
+    print('Você decidiu parar de brincar')
 
     # estrutura de identificação / execução de script
 if __name__ == '__main__':
@@ -73,7 +128,16 @@ if __name__ == '__main__':
     contagem_progressiva(10)
 
     #exibir o nome do candidato varias vezes.
-    apoiar_candidato('Fake', 999)
+    apoiar_candidato('Fake', 19)
 
     #PLIM
     brincar_de_plim(100)
+
+    #exemplo de dia da semana com if - elif - else
+    exibir_dia_da_semana_if(1)
+
+    #exemplo de dia da semana com match - case
+    #exibir_dia_da_semana_match(1)
+
+    #exemplo com while - para ou continua
+    brinca_de_para_ou_continua()
